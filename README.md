@@ -204,6 +204,23 @@ FOR /F "tokens=*" %G IN ('DIR /B /AD /S .git') DO RMDIR /S /Q "%G"
 
 ***********
 
+https://stackoverflow.com/questions/1213430/how-to-fully-delete-a-git-repository-created-with-init/34037867
+
+remove .git foler in windows !  
+
+
+To fixed the bug : 
+QuantLib-vc141-x64-mt.lib(italy.obj) : warning LNK4099: PDB 'QuantLib.pdb' was not found with 'QuantLib-vc141-x64-mt.lib(italy.obj)' or at 'C:\projects\xiaoyao\testsuite19\bin\QuantLib.pdb'; linking object as if no debug info
+
+
+
+
+.\build\$(qlCompilerTag)\$(Platform)\$(Configuration)\
+
+
+
+
+
 
 
 Now I create a new solution:
