@@ -479,4 +479,85 @@ Now I temporarily remove QuantLib lib, only built testsuite 19.
 
 
 
+To fixed the bug : 
+QuantLib-vc141-x64-mt.lib(italy.obj) : warning LNK4099: PDB 'QuantLib.pdb' was not found with 'QuantLib-vc141-x64-mt.lib(italy.obj)' or at 'C:\projects\xiaoyao\testsuite19\bin\QuantLib.pdb'; linking object as if no debug info
+
+
+
+
+.\build\$(qlCompilerTag)\$(Platform)\$(Configuration)\
+
+1.0.10
+
+https://ci.appveyor.com/project/XiaoyaoMa/quantlib-calendar
+
+
+This version is working !  
+
+https://github.com/Gaussma/Quantlib_calendar
+
+update lib 
+ 
+Gaussma committed 4 minutes ago 
+ 
+ 
+ 
+0c90c64  !!!
+
+
+Quantlib Configurations :  Release x64
+
+General: Output Directory : lib\
+         intermediate Directory : .\build\$(qlCompilerTag)\$(Platform)\$(Configuration)\
+
+         Target name : QuantLib-$(qlCompilerTag)-x64-mt  
+
+         Configuration Type: Static Lib (.lib)
+         Use of MFC: Use Standard Windows Libraries 
+         Character Set :  Use Multi-Byte Character Set 
+
+VC++ Directories : Include Directories : $(BOOST_ROOT)
+C/C++ : General : 
+Additional IncludeDirectories : $(BOOST_ROOT); . ;  
+  Note : "." is very important !  
+
+  Debug Information Format : Program Database(/Zi)
+  Supprot Just My Code Debugging: Yes(/JMC)
+
+  Precompiled Header :    NONE (EMPTY)
+  Output files : \build\$(qlCompilerTag)\$(Platform)\$(Configuration)\  
+
+
+
+  Testsuite19 : 
+
+   Configuration General: Output Directory : bin\
+
+   Target extension: .exe 
+
+   Configuration type : Application(.exe)
+
+   VC++ Directories : Include Directories : $(BOOST_ROOT); ..\    (return to parent directory)
+
+   Reference Directories : ..\lib 
+
+   Additional Include Directories : $(BOOST_ROOT); ..\ 
+
+   Linker : Additional Library Directories : $(BOOST_LIBRARYDIR) ; ..\lib 
+
+
+   
+
+
+
+
+
+
+ 
+
+
+
+
+
+
 
